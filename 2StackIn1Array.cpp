@@ -64,7 +64,7 @@ class Stack{
         cout << "Top 1 = " << top1 << endl;
         cout << "Top 2 = " << top2 << endl;
         for(int i = 0; i < size; i++){
-            cout << arr[i] << " ";
+            cout << *(arr + i) << " ";
         }
         cout << endl;
         cout << endl;
@@ -83,8 +83,6 @@ int main(){
     S1.print();
     S1.push1(40);
     S1.print();
-
-
 
     S1.push2(100);
     S1.print();
