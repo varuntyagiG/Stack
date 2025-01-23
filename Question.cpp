@@ -1,25 +1,30 @@
 #include <iostream>
-#include <stack>
-#include <string>
 using namespace std;
+
+int factorial(int num){
+    if(num == 1){
+        return 1;
+    }
+
+    return num * factorial(num-1);
+}
+
+void printArray(int* arr,int index,int size){
+    if(index >= size){
+        return;
+    }
+
+    printArray(arr,index + 1,size);
+    cout << arr[index] << " ";
+}
 
 
 int main(){
-    string str = "Varun";
-    stack<char> st;
+    int arr[5] = {2,4,6,8,10};
+    int size = 5;
+    int index = 0;
 
-    for(int i = 0; i < str.length(); i++){
-        st.push(str[i]);
-    }
-
-    string ans = "";
-
-    while(!st.empty()){
-        ans += st.top();
-        st.pop();
-    }
-
-    cout << "Original String : " << str << endl;
-    cout << "Reverse String : " << ans << endl;
+    printArray(arr,index,size);
+    cout << endl;
     return 0;
 }
