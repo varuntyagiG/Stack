@@ -19,7 +19,7 @@ void findMiddle(stack<int> &st, int &totalSize) {
 int main() {
   stack<int> st;
 
-  for (int i = 10; i < 100; i = i + 10) {
+  for (int i = 10; i <= 100; i = i + 10) {
     st.push(i);
   }
 
